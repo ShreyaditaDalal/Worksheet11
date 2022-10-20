@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worksheet 10</title>
+    <script>
+        function buttonbg(id){
+            
+            var x = document.getElementById('bg1').style.backgroundColor; 
+            if (x=="red"){ 
+                document.getElementById(id).style.backgroundColor = "pink" ;
+            } 
+            else if (x=="pink") {
+                document.getElementById(id).style.backgroundColor = "green";
+            }
+            else { 
+                document.getElementById(id).style.backgroundColor = "red";
+            }
+   
+        }     
+         
+function overlap(){ 
+    if (document.getElementById('1').src.match("offbulb.jpg")) {
+       document.getElementById('1').src="onbulb.jpg";
+    } else {  
+       document.getElementById('1').src = "offbulb.jpg";   
+    }
+} 
+    </script>
+</head>
+<body>
+    <h1 style="text-align:center">Change Colour</h1>
+    <form style="text-align:center" id="f1"> 
+        <input type="button" style="width:100%; height:100px;" value="Click for Color Change" id="bg1" onclick="buttonbg('bg1')">  
+    </form>
+    <h1 style="text-align:center">Overlapping Image</h1> 
+    <form style="text-align:center">
+        <img src="offbulb.jpg" id="1">  
+        <br> 
+        <button type="button" onclick="overlap()" id="click">Click me</button> 
+    </form>  
+    
+</body>
+</html>     
+
